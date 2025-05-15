@@ -196,7 +196,6 @@ example (m : ℕ) : ∃ n : ℕ, 8 + 2*m = 2*n + m + m := by
   ring
 
 
-
 /-
 Per utilitzar una hipòtesi del tipus `h : ∃ x, P x`, fem servir `rcases`
 per obtenir un `x₀` amb la propietat indicada. També podem escriure
@@ -275,6 +274,7 @@ example (f : X → Y) (g : Y → Z) (hgf : injectiva (g ∘ f)) : injectiva f :=
   -- sorry
 
 example : ∃ (f g : ℕ → ℕ), (injectiva (g ∘ f) ∧ ¬ injectiva g) := by
+  -- sorry
   -- Demostrem que existeixen dues funcions que compleixen les condicions.
   use (fun x => x+1) -- f(x) = x+1
   use (fun x => x-1) -- g(x) = x-1 als naturals!!
@@ -289,6 +289,7 @@ example : ∃ (f g : ℕ → ℕ), (injectiva (g ∘ f) ∧ ¬ injectiva g) := b
   -- sorry
 
 example (f : X → Y) (g : Y → Z) (hgf : exhaustiva (g ∘ f)) : exhaustiva g := by
+  -- sorry
   -- Demostrem que existeix una funció que compleix les condicions.
   intro z
   -- Com que hgf és exhaustiva:
@@ -298,6 +299,7 @@ example (f : X → Y) (g : Y → Z) (hgf : exhaustiva (g ∘ f)) : exhaustiva g 
   -- sorry
 
 example : ∃ (f g : ℕ → ℕ), (exhaustiva (g ∘ f) ∧ (¬ exhaustiva f)) := by
+  -- sorry
   -- Demostrem que existeixen dues funcions que compleixen les condicions.
   use (fun x => x+1) -- f(x) = x+1
   use (fun x => x-1) -- g(x) = x-1 als naturals!!
