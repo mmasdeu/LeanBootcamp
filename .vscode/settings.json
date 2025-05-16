@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/.lake/": true,
+        "lake-manifest.json": true,
+        "**/.git/": true,
+        "**/.github/": true,
+        "**/.vscode/": true,
+        "lakefile.toml": true,
+        "lean-toolchain": true,
+    }
+}

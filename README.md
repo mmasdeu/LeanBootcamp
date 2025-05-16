@@ -30,7 +30,7 @@ Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de t
 
 Hi ha webs que ens permeten treballar més còmodament, però cal un compte a [GitHub](www.github.com).
 
-* Per fer servir codespaces, cliqueu al botó de sota estant loggejat a GitHub. Escolliu l'opció `4-core`, i cliqueu `Create codespace`. Després d'uns minuts apareixerà un editor Lean en el propi navegador.
+* Per fer servir codespaces, cliqueu al botó de sota estant loggejat a GitHub. Escolliu l'opció `4-core` i cliqueu `Create codespace`. Després d'uns minuts apareixerà un editor Lean en el propi navegador.
 
     [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mmasdeu/LeanBootcamp)
 
