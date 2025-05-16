@@ -1,6 +1,5 @@
 import Mathlib
 macro (name := ring) "ring" : tactic => `(tactic| first | ring1 | ring_nf)
-set_option linter.unusedTactic false
 
 /- # Implicacions
 
