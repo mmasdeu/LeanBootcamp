@@ -17,8 +17,9 @@ així que la llibreria `mathlib` disposa d'una tàctica
 anomenada `ring` que s'encarrega de demostrar igualtats que es poden deduir aplicant
 les propietats dels anells commutatius.
 
-També hi ha les tàctiques `abel` que només fa servir propietats de grups abelians, o
-`noncomm_ring` per anells no commutatius...
+També hi ha les tàctiques `abel` que només fa servir propietats de grups abelians,
+la tàctica `group` (grups), `field_simp` (cossos), o
+`noncomm_ring` (anells no commutatius),...
 -/
 
 example (a b c : ℝ) : (a * b) * c = b * (a * c) := by
@@ -48,26 +49,10 @@ objectes matemàtics A i B són iguals, llavors en qualsevol enunciat que impliq
 per B. Aquesta operació es diu reescriptura, i la tàctica bàsica de Lean per fer-ho és `rw`:
 -/
 example (a b c d e : ℝ) (h : a = b + c) (h' : b = d - e) : a + e = d + c := by
-  rw [h]
-  rw [h']
-  ring
+  sorry
 
 /-
-La tàctica `rw` necessita que se li indiqui cada pas de reescriptura. Més endavant veurem tàctiques
-més potents que automatitzen els passos tediosos.
-
-Es poden fer diverses reescriptures en una sola instrucció:
--/
-example (a b c d e : ℝ) (h : a = b + c) (h' : b = d - e) : a + e = d + c := by
-  rw [h, h']
-  ring
-
-/-
-Posant el cursor entre `h` i `h'` es veure l'estat de la demostració intermèdia.
-
-Observeu el subtil canvi de color de fons a l'estat de la tàctica: en verd el que és nou,
-i en vermell el que està a punt de canviar.
-
+Es poden fer diverses reescriptures en una sola instrucció...
 -/
 
 example (a b c d : ℝ) (h : b = d + d) (h' : a = b + c) : a + b = c + 4 * d := by
@@ -84,34 +69,22 @@ Pel següent resultat, reescriurem dues vegades amb el lema
 `exp_add x y`, que és una demostració de `exp(x+y) = exp(x) * exp(y)`.
 -/
 example (a b c : ℝ) : exp (a + b + c) = exp a * exp b * exp c := by
-  rw [exp_add (a + b) c]
-  rw [exp_add a b]
+  sorry
 
 /-
-Observeu també que després de la segona `rw` l'objectiu esdevé
-`exp a * exp b * exp c = exp a * exp b * exp c`, i Lean declara immediatament que la demostració ha finalitzat.
-
-Si no proporcionem arguments als lemes, Lean reescriurà la primera subexpressió coincident.
-En el nostre exemple això és suficient:
+Però de vegades cal més control:
 -/
-example (a b c : ℝ) : exp (a + b + c) = exp a * exp b * exp c := by
-  rw [exp_add, exp_add]
-
-/-
-Però de vegades cal més control (TODO)
--/
-example (a b c d : ℝ) : exp (a * c + b * c) * exp (c + d) = exp (a * c + b * c) * exp c * exp d := by
-  rw [exp_add, exp_add]
-  ring
+example (a b c : ℝ) : exp (a + exp (b + c)) = exp (a + exp b * exp c) := by
+  rw [exp_add b c]
 
 
 /-
 Fem un exercici, on també cal utilitzar
 `exp_sub x y : exp(x-y) = exp(x) / exp(y)` i `exp_zero : exp 0 = 1`.
 
-Recorda que `a + b - c` vol dir `(a + b) - c`.
+Recordeu que `a + b - c` vol dir `(a + b) - c`.
 
-Pots usar `ring` o reescriure amb `mul_one x : x * 1 = x` per simplificar el denominador
+Podeu fer servir `ring` o reescriure amb `mul_one x : x * 1 = x` per simplificar el denominador
 al costat dret.
 -/
 
@@ -128,9 +101,9 @@ example (a b c d e: ℝ) (h : a = b + c) (h' : a + e = d + c) : b + c + e = d + 
   rw [← h, h']
 
 /-
-Quan vegis en un fitxer Lean un símbol que no tens al teclat, com `←`,
-posa el cursor a sobre per veure un missatge emergent que t'indicarà com escriure'l.
-En el cas de `←`, escriu `\l `, o sigui, barra invertida + l + espai.
+Quan vegeu en un fitxer Lean un símbol que no apareix al teclat, com `←`,
+poseu el cursor a sobre per veure un missatge emergent que indica com escriure'l.
+En el cas de `←`, escriviu `\l `, o sigui, barra invertida + l + espai.
 
 Aquesta reescriptura d'esquerra a dreta fa referència al costat de la igualtat que volem
 *utilitzar*, no al costat que volem *demostrar*. `rw [← h]` substituirà el costat dret
@@ -146,29 +119,28 @@ També podem reescriure en una hipòtesi del context local, utilitzant per exemp
   `rw [exp_add x y] at h`
 per substituir `exp(x + y)` per `exp(x) * exp(y)` a la hipòtesi `h`.
 
-La tàctica `exact` et permet proporcionar un terme de prova explícit per demostrar l'objectiu actual.
+La tàctica `exact` permet proporcionar un terme de prova explícit per demostrar l'objectiu actual.
 -/
 
 example (a b c d : ℝ) (h : c = d*a + b) (h' : b = d) : c = d*a + d := by
-  rw [h'] at h
-  -- La nostra hipòtesi `h` és ara exactament el que volem demostrar
-  exact h
+  sorry
+
 
 /- ## Presentació de càlculs amb `calc`
 
 El que hem escrit a l'exemple anterior està molt allunyat del que escriuríem en
-paper. Ara veurem com obtenir una presentació més natural (i també tornar a utilitzar `ring`
-en lloc de lemas explícits).
+paper. Ara veurem com obtenir una presentació més natural (i utilitzar `ring`
+en lloc de lemes explícits).
 Després de cada `:=`, l'objectiu és demostrar la igualtat amb la línia anterior
 (o amb el costat esquerre de la primera línia).
-Revisa amb cura i posa el cursor després de cada `by` per veure l'estat de la tàctica.
+Reviseu amb cura i posa el cursor després de cada `by` per veure l'estat de la tàctica.
 -/
 
 example (a b c d : ℝ) (h : c = b*a - d) (h' : d = a*b) : c = 0 := by
   calc
-    c = b*a - d   := by rw [h]
-    _ = b*a - a*b := by rw [h']
-    _ = 0         := by ring
+    c = b*a - d   := by /- ininde sorry -/rw [h]/- ininde sorry -/
+    _ = b*a - a*b := by  /- ininde sorry -/rw [h']/- ininde sorry -/
+    _ = 0         := by  /- ininde sorry -/ring/- ininde sorry -/
 
 /-
 Fem alguns exercicis utilitzant `calc`.

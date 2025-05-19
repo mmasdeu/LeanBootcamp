@@ -20,7 +20,7 @@ Suposem que volem demostrar `0 < (a^2)^2`. Podem fer-ho aplicant `sq_pos_of_pos`
 dues vegades.
 -/
 example (a : ℝ) (ha : 0 < a) : 0 < (a^2)^2 := by
-  exact sq_pos_of_pos (sq_pos_of_pos ha)
+  sorry
 
 /-
 La demostració que hem fet s'anomena d'estil "directe":
@@ -69,7 +69,7 @@ example (a : ℝ) (ha : 0 < a) : 0 < (a^2)^2 := by
     exact ha             -- cal mantenir la indentació
   exact sq_pos_of_pos h2 -- un cop acabat el subobjectiu, seguim amb la demostració
 
-/- Fem-ho ara amb raonament directe -/
+/- Feu la següent prova amb raonament directe -/
 
 example (a b : ℝ) (ha : 0 < a) (hb : 0 < b) : 0 < a^2 + b^2 := by
   sorry
@@ -98,11 +98,10 @@ example (p q r : Prop) : (p → q) → (p → q → r) → p → r := by
 
 ## Utilitzar equivalències per reescriure enunciats
 
-En el fitxer anterior hem vist com reescriure utilitzant igualtats.
-L'operació anàloga amb enunciats matemàtics és reescriure utilitzant
-equivalències. Això també es fa utilitzant la tàctica `rw`.
+L'operació anàloga a reescriure igualtats de predicats seria
+reescriure utilitzant equivalències.
+Això també es fa utilitzant la tàctica `rw`.
 Lean utilitza `↔` per denotar equivalència en lloc de `⇔`.
-
 
 En els següents exercicis utilitzarem el lema:
 
@@ -131,13 +130,13 @@ Ho hem de pensar així:
 "`add_le_add_iff_right` és una funció que envia un nombre `c`
 a la demostració de l'equivalència `a + c ≤ b + c ↔ a ≤ b`".
 
-Podem veure'l en acció:
+Fem-lo servir en la següent demostració:
 -/
 
 example {a b : ℝ}  (ha : 0 ≤ a) : b ≤ a + b := by
   calc
-    b = 0 + b := by ring
-    _ ≤ a + b := by rw [add_le_add_iff_right b] ; exact ha
+    b = 0 + b := by sorry
+    _ ≤ a + b := by sorry
 
 /-
 ## Una equivalència són dues implicacions
@@ -149,7 +148,7 @@ anterior. Si `h : P ↔ Q`, llavors `h.1 : P → Q` i `h.2 : Q → P`.
 example {a b : ℝ}  (ha : 0 ≤ a) : b ≤ a + b := by
   calc
     b = 0 + b := by ring
-    _ ≤ a + b := by exact (add_le_add_iff_right b).2 ha
+    _ ≤ a + b := by sorry
 
 
 /-
