@@ -13,10 +13,8 @@ Podeu treballar amb Lean mitjançant una de les 3 opcions següents:
 
 ## Versió Online, sense registre
 
-La manera més fàcil de provar Lean sense haver de crear cap tipus de compte és fer servir el [servidor lean4web](https://live.lean-lang.org/) proveït pel [Lean FRO](https://lean-fro.org/):
+La manera més fàcil de provar Lean sense haver de crear cap tipus de compte és fer servir el [servidor lean4web](https://live.lean-lang.org/) proveït pel [Lean FRO](https://lean-fro.org/).
 
-
-Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de tàctiques](tactics.pdf) com a referència.
 
 * [01Rw](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fmmasdeu%2FLeanBootcamp%2Frefs%2Fheads%2Fmain%2FLeanBootcamp%2FExercises%2F01Rw.lean)
 
@@ -25,6 +23,8 @@ Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de t
 * [03Quantificadors](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fmmasdeu%2FLeanBootcamp%2Frefs%2Fheads%2Fmain%2FLeanBootcamp%2FExercises%2F03Quantificadors.lean)
 
 * [04Successions](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fmmasdeu%2FLeanBootcamp%2Frefs%2Fheads%2Fmain%2FLeanBootcamp%2FExercises%2F04Successions.lean)
+
+Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de tàctiques](tactics.pdf) com a referència.
 
 ## Versió online, amb registre
 
