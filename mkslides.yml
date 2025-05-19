@@ -1,9 +1,9 @@
 index:
   title: Lean Bootcamp
-  favicon: https://www.uab.cat/ca/identitatcorporativa/img/exemple-01-dimatge-perfil/xarxes-imatge-perfil-exemple01_web.png
+  favicon: https://www.uab.cat/ca/uab/img/universitat-autonoma-barcelona/logo-xxss.png
   theme: https://hogenttin.github.io/cdn/styles/reveal-js/index.css
 slides:
-  favicon: https://www.uab.cat/ca/identitatcorporativa/img/exemple-01-dimatge-perfil/xarxes-imatge-perfil-exemple01_web.png
+  favicon: https://www.uab.cat/ca/uab/img/universitat-autonoma-barcelona/logo-xxss.png
   theme: https://hogenttin.github.io/cdn/styles/reveal-js/slides.css
   highlight_theme: vs
   separator: ^\s*---\s*$

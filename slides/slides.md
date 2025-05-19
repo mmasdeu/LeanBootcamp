@@ -110,7 +110,7 @@ Exemples:<!-- .element: class="fragment" -->
   * Conjectura d'Erdös-Graham (Bloom et al 2022)<!-- .element: class="fragment" -->
   * Últim Teorema de Fermat per primers regulars (Birkbeck et al 2023)<!-- .element: class="fragment" -->
   * La conjectura de Freiman-Ruzsa polinòmica (Tao et al 2023)<!-- .element: class="fragment" -->
-  * Prime number theorem i FLT (en progrés)
+  * Prime number theorem i FLT (en progrés)<!-- .element: class="fragment" -->
 
 ---
 
@@ -174,10 +174,12 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
 ---
  ## 3. Enllaços rellevants
 
-- On trobar aquestes slides: <a href="https://mmasdeu.github.io/leanbootcamp" target="_blank">mmasdeu.github.io/leanbootcamp</a>
+- <a href="https://mmasdeu.github.io/leanbootcamp" target="_blank">mmasdeu.github.io/leanbootcamp/slides.html</a>
 - <a href="https://leanprover-community.github.io/" target="_blank">Pàgina de Lean Community</a>
 - <a href="https://leanprover.zulipchat.com/" target="_blank">Xat de zulip</a> (es demana fer servir el nom real).
 - <a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank">Mathematics in Lean</a> (llibre).
+
+---
 
 ## 4. Taller
 
