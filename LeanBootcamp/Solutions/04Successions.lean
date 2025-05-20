@@ -27,7 +27,7 @@ example (a b c d : ℝ) (hab : a ≤ b) (hcd : c ≤ d) : a + c ≤ b + d := by
   -- sorry
 
 /-
-A successió `u` és una funció de `ℕ` a `ℝ`, amb Lean ho escrivim
+Una successió `u` és una funció de `ℕ` a `ℝ`, amb Lean ho escrivim
 `u : ℕ → ℝ`
 La definició que farem servir és:
 -/
@@ -112,7 +112,7 @@ example (hu : tendeix u l) (hv : tendeix v l') :
     _ ≤ ε                                             := by linarith [fact₁, fact₂]
 
 
-/- El teorema del sànditx -/
+/- El teorema del sàndvitx -/
 example (hu : tendeix u l) (hw : tendeix w l) (h : ∀ n, u n ≤ v n) (h' : ∀ n, v n ≤ w n) :
     tendeix v l := by
   -- sorry
@@ -255,7 +255,7 @@ example : (∃ l, tendeix u l) → esCauchy u := by
   intro hyp
   rcases hyp with ⟨l, hl⟩
   intro ε ε_pos
-  rcases hl (ε / 2) (by positivity) with ⟨N, hN⟩
+  rcases hl (ε / 2) (by linarith) with ⟨N, hN⟩
   use N
   intro p q hp hq
   calc
@@ -267,16 +267,16 @@ example : (∃ l, tendeix u l) → esCauchy u := by
 
 /-
 Ara podem fer servir el lema
- prop_punt_acumulacio : cluster_point u a → ∀ ε > 0, ∀ N, ∃ n ≥ N, |u n - a| ≤ ε
+ prop_punt_acumulacio : punt_acumulacio u a → ∀ ε > 0, ∀ N, ∃ n ≥ N, |u n - a| ≤ ε
 -/
 
 example (hu : esCauchy u) (hl : punt_acumulacio u l) : tendeix u l := by
   -- sorry
   intro ε ε_pos
-  rcases hu (ε / 2) (by positivity) with ⟨N, hN⟩
+  rcases hu (ε / 2) (by linarith) with ⟨N, hN⟩
   use N
   have clau : ∃ N' ≥ N, |u N' - l| ≤ ε / 2 := by
-    apply prop_punt_acumulacio hl (ε / 2) (by positivity)
+    apply prop_punt_acumulacio hl (ε / 2) (by linarith)
   rcases clau with ⟨N', h⟩
   rcases h with ⟨hNN', hN'⟩
   intro n hn

@@ -163,6 +163,33 @@ example (p q r : Prop) : (p → (q → r)) ↔ p ∧ q → r := by
 example (p q r : Prop) : (p → (q → r)) ↔ p ∧ q → r := by
   tauto
 
+/- # Disjuncions
+
+La disjunció de predicats s'escriu `P ∨ Q`.
+
+Per demostrar `P ∨ Q`, haurem de decidir quin dels dos predicats volem
+(o podem) demostrar. Aleshores les tàctiques `left` o `right` ens permeten
+sel·leccionar un dels dos objectius.
+-/
+
+example (a b : ℝ) (h1 : a + b = 3) (h2 : a - b = 1) : a = 2 ∨ a = 1 := by
+  sorry
+
+/-
+Si hi ha una disjunció en les hipòtesis, podem fer una demostració per casos.
+
+`rcases h with hP | hQ`
+
+trenca la hipòtesi `h : P ∨ Q` en dues branques. La primera branca
+anomena la hipòtesi que `P` és certa com a `hP`, i la segona fa el mateix
+amb `hQ : Q`.
+-/
+
+example (a b : ℝ) (h : a = 2 ∨ a = -2) : a^2 + 1 = 5 := by
+  sorry
+
+
+
 /- # Quantificadors existencials
 
 Per tal de demostrar `∃ x, P x`, donem algun `x₀` fent servir la tàctica `use x₀` i
@@ -218,12 +245,22 @@ example (f : X → Y) (g : Y → Z) (hf : exhaustiva f) (hg : exhaustiva g) :
 example (f : X → Y) (g : Y → Z) (hgf : injectiva (g ∘ f)) : injectiva f := by
   sorry
 
-example : ∃ (f g : ℕ → ℕ), (injectiva (g ∘ f) ∧ ¬ injectiva g) := by
-  sorry
-
 example (f : X → Y) (g : Y → Z) (hgf : exhaustiva (g ∘ f)) : exhaustiva g := by
   sorry
 
-example : ∃ (f g : ℕ → ℕ), (exhaustiva (g ∘ f) ∧ (¬ exhaustiva f)) := by
+/- Acabem donant contraexemples coneguts dels recíprocs -/
+
+def f : ℕ → ℕ := λ x ↦ x + 1
+def g : ℕ → ℕ := λ x ↦ x - 1
+
+#eval f 2
+#eval g 2
+#eval g 0 -- !!!
+
+
+example : (injectiva (g ∘ f) ∧ ¬ injectiva g) := by
+  sorry
+
+example : (exhaustiva (g ∘ f) ∧ (¬ exhaustiva f)) := by
   sorry
 

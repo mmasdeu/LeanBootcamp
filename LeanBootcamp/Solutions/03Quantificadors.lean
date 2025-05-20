@@ -184,6 +184,33 @@ example (p q r : Prop) : (p → (q → r)) ↔ p ∧ q → r := by
 example (p q r : Prop) : (p → (q → r)) ↔ p ∧ q → r := by
   tauto
 
+/- # Disjuncions
+
+La disjunció de predicats s'escriu `P ∨ Q`.
+
+Per demostrar `P ∨ Q`, haurem de decidir quin dels dos predicats volem
+(o podem) demostrar. Aleshores les tàctiques `left` o `right` ens permeten
+sel·leccionar un dels dos objectius.
+-/
+
+example (a b : ℝ) (h1 : a + b = 3) (h2 : a - b = 1) : a = 2 ∨ a = 1 := by
+  sorry
+
+/-
+Si hi ha una disjunció en les hipòtesis, podem fer una demostració per casos.
+
+`rcases h with hP | hQ`
+
+trenca la hipòtesi `h : P ∨ Q` en dues branques. La primera branca
+anomena la hipòtesi que `P` és certa com a `hP`, i la segona fa el mateix
+amb `hQ : Q`.
+-/
+
+example (a b : ℝ) (h : a = 2 ∨ a = -2) : a^2 + 1 = 5 := by
+  sorry
+
+
+
 /- # Quantificadors existencials
 
 Per tal de demostrar `∃ x, P x`, donem algun `x₀` fent servir la tàctica `use x₀` i
@@ -272,24 +299,8 @@ example (f : X → Y) (g : Y → Z) (hgf : injectiva (g ∘ f)) : injectiva f :=
   rw [h]
   -- sorry
 
-example : ∃ (f g : ℕ → ℕ), (injectiva (g ∘ f) ∧ ¬ injectiva g) := by
-  -- sorry
-  -- Demostrem que existeixen dues funcions que compleixen les condicions.
-  use (fun x => x+1) -- f(x) = x+1
-  use (fun x => x-1) -- g(x) = x-1 als naturals!!
-  constructor
-  · intro x y h
-    simp at h
-    rw [h]
-  · simp [injectiva]
-    use 0
-    use 1
-    simp
-  -- sorry
-
 example (f : X → Y) (g : Y → Z) (hgf : exhaustiva (g ∘ f)) : exhaustiva g := by
   -- sorry
-  -- Demostrem que existeix una funció que compleix les condicions.
   intro z
   -- Com que hgf és exhaustiva:
   obtain ⟨x, hx⟩ := hgf z
@@ -297,16 +308,35 @@ example (f : X → Y) (g : Y → Z) (hgf : exhaustiva (g ∘ f)) : exhaustiva g 
   exact hx
   -- sorry
 
-example : ∃ (f g : ℕ → ℕ), (exhaustiva (g ∘ f) ∧ (¬ exhaustiva f)) := by
+/- Acabem donant contraexemples coneguts dels recíprocs -/
+
+def f : ℕ → ℕ := λ x ↦ x + 1
+def g : ℕ → ℕ := λ x ↦ x - 1
+
+#eval f 2
+#eval g 2
+#eval g 0 -- !!!
+
+
+example : (injectiva (g ∘ f) ∧ ¬ injectiva g) := by
   -- sorry
-  -- Demostrem que existeixen dues funcions que compleixen les condicions.
-  use (fun x => x+1) -- f(x) = x+1
-  use (fun x => x-1) -- g(x) = x-1 als naturals!!
+  constructor
+  · intro x y h
+    simp [f, g] at h
+    rw [h]
+  · simp [injectiva]
+    use 0
+    use 1
+    simp [g]
+  -- sorry
+
+example : (exhaustiva (g ∘ f) ∧ (¬ exhaustiva f)) := by
+  -- sorry
   constructor
   · intro y
-    simp
+    simp [f, g]
   · intro h
     unfold exhaustiva at h
     obtain ⟨x, hx⟩ := h 0
-    simp at hx
+    simp [f] at hx
   -- sorry

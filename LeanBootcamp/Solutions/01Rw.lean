@@ -174,7 +174,7 @@ example (a b c : ℝ) (h : a = b + c) : exp (2 * a) = (exp b) ^ 2 * (exp c) ^ 2 
               _ = (exp b) ^ 2 * (exp c)^2           := by /- inline sorry -/ring/- inline sorry -/
 
 /-
-En la pràctica, en escriure una prova com aquesta, pot ser convenient:
+A la pràctica, en escriure una prova com aquesta, pot ser convenient:
 * Pausar l'actualització de l'estat de la tàctica a VScode clicant el botó de Pausa
 dalt a la dreta del panell d'Infoview de Lean.
 * Escriure tot el càlcul, acabant cada línia amb ":= ?_"
