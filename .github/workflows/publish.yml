@@ -27,6 +27,6 @@ jobs:
       - run: mkslides build slides/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./
       - id: deployment
         uses: actions/deploy-pages@v4
