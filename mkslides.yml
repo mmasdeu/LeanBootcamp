@@ -1,10 +1,10 @@
 index:
   title: Lean Bootcamp
   favicon: https://www.uab.cat/Xcelerate/WAI/img/simbol.png
-  theme: night
+
 slides:
   favicon: https://www.uab.cat/Xcelerate/WAI/img/simbol.png
-  theme: night
+
   separator: ^\s*---\s*$
   separator_vertical: ^\s*-v-\s*$
   separator_notes: "^Notes?:"
