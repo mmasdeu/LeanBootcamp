@@ -156,7 +156,7 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
 - Més de $214\text{K}$ 'teoremes'.
 - 576 contribuïdors.
 
-![Lines](./lines.png)<!-- .element height="60%" width="60%" -->
+![Lines](./lines.png)<!-- .element height="40%" width="40%" -->
 
 
 ---
