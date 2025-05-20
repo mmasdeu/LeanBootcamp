@@ -2,7 +2,6 @@
 title: Lean Bootcamp
 separator: \n---\n
 css: custom.css
-highlightTheme: github
 verticalSeparator: \n----\n
 revealOptions:
   controls: true

@@ -5,7 +5,6 @@ index:
 slides:
   favicon: https://www.uab.cat/Xcelerate/WAI/img/simbol.png
   theme: night
-  highlight_theme: vs
   separator: ^\s*---\s*$
   separator_vertical: ^\s*-v-\s*$
   separator_notes: "^Notes?:"
