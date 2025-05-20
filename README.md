@@ -1,7 +1,7 @@
 # Lean Bootcamp
 ## Material
 
-- [slides](html/Slides.html)
+- [slides](html/slides.html)
 - [tactics.pdf](tactics.pdf)
 
 
