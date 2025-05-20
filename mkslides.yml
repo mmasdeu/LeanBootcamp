@@ -4,7 +4,7 @@ index:
 
 slides:
   favicon: https://www.uab.cat/Xcelerate/WAI/img/simbol.png
-
+  theme: white
   separator: ^\s*---\s*$
   separator_vertical: ^\s*-v-\s*$
   separator_notes: "^Notes?:"
