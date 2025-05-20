@@ -4,7 +4,6 @@ macro (name := ring) "ring" : tactic => `(tactic| first | ring1 | ring_nf)
 
 open Function
 
-namespace Forall
 /- # Quantificador universal (∀)
 
 Sigui `P` un predicat sobre un tipus `X`. Això significa que per a cada objecte
