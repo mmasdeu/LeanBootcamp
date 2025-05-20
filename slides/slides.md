@@ -163,10 +163,16 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
  ## 3. Enllaços rellevants
 ---
 
-- <a href="https://mmasdeu.github.io/leanbootcamp" target="_blank">mmasdeu.github.io/leanbootcamp/slides.html</a>
-- <a href="https://leanprover-community.github.io/" target="_blank">Pàgina de Lean Community</a>
-- <a href="https://leanprover.zulipchat.com/" target="_blank">Xat de zulip</a> (es demana fer servir el nom real).
-- <a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank">Mathematics in Lean</a> (llibre).
+- Recursos oficials:
+  * <a href="https://leanprover-community.github.io/" target="_blank">Pàgina de Lean Community</a>
+  * <a href="https://leanprover.zulipchat.com/" target="_blank">Xat de Zulip</a> (es demana fer servir el nom real).
+  * <a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank">Mathematics in Lean</a> (llibre).
+  * <a href="https://hrmacbeth.github.io/math2001/" target="_blank">The Mechanics of Proof</a> (llibre, més fàcil).
+
+
+- Transparències del Bootcamp:
+  * <a href="https://mmasdeu.github.io/LeanBootcamp" target="_blank">mmasdeu.github.io/LeanBootcamp/html/slides.html</a>
+
 
 ---
 <!-- .slide: class="center" -->
