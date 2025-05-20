@@ -1,4 +1,5 @@
-# Material
+# Lean Bootcamp
+## Material
 
 - [slides](html/Slides.html)
 - [tactics.pdf](tactics.pdf)
@@ -15,7 +16,7 @@
 Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de tàctiques](tactics.pdf) com a referència.
 
 
-# Instal·lació
+## Instal·lació
 
 Aquest repositori és una introducció a la demostració de teoremes amb Lean.
 
@@ -28,12 +29,12 @@ Podeu treballar amb Lean mitjançant una de les 3 opcions següents:
 2. Utilitzar el servior lean4web (per començar sense cap prerequisit).
 3. Fer servir Codespaces o Gitpod (per no instal·lar res, però ens permet fer servir projectes més grans).
 
-## Versió Online, sense registre
+### Versió Online, sense registre
 
 La manera més fàcil de provar Lean sense haver de crear cap tipus de compte és fer servir el [servidor lean4web](https://live.lean-lang.org/) proveït pel [Lean FRO](https://lean-fro.org/). Podeu clicar els enllaços de més amunt.
 
 
-## Versió online, amb registre
+### Versió online, amb registre
 
 Hi ha webs que ens permeten treballar més còmodament, però cal un compte a [GitHub](www.github.com).
 
@@ -45,7 +46,7 @@ Hi ha webs que ens permeten treballar més còmodament, però cal un compte a [G
 
     [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mmasdeu/LeanBootcamp)
 
-## Instal·lació local
+### Instal·lació local
 
 Per gaudir de l'experiència Lean completa, us caldrà instal·lar-lo en el vostre ordinador.
 

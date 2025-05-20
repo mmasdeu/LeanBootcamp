@@ -1,7 +1,6 @@
 ---
 title: Lean Bootcamp
 separator: \n---\n
-theme: white
 css: custom.css
 highlightTheme: github
 verticalSeparator: \n----\n
@@ -185,7 +184,6 @@ Fitxers Lean pel Bootcamp:
 
 - <a href="https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fmmasdeu%2FLeanBootcamp%2Frefs%2Fheads%2Fmain%2FLeanBootcamp%2FExercises%2F04Successions.lean" target="_blank">04Successions</a>
 
----
 
 
 
