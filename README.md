@@ -1,6 +1,6 @@
 # Material
 
-- [slides](slides/slides.md)
+- [slides](html/Slides.html)
 - [tactics.pdf](tactics.pdf)
 
 

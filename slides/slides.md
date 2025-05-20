@@ -12,20 +12,13 @@ revealOptions:
   backgroundTransition: 'fade'
   center: true
 ---
-<!-- .slide: data-background="./columnes.jpg" -->
 
-<!-- .h1 {
-    /* 1 pixel black shadow to left, top, right and bottom */
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ <h1>Lean Bootcamp</h1>
 
-    font-family: sans; color: yellow;
-} -->
- <h1 style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Lean Bootcamp</h1>
-
-<h3 style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Barcelona</h3>
+<h3>Barcelona</h3>
 
 
-<div style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Marc Masdeu (UAB-CRM) · 14 de maig del 2025</div>
+<div>Marc Masdeu (UAB-CRM) · 20 de maig del 2025</div>
 ---
 
 ## Pla
@@ -36,6 +29,7 @@ revealOptions:
 4. Taller
 ---
 
+<!-- .slide: class="center" -->
 ## 1. Què és la formalització?
 
 ---
@@ -51,7 +45,7 @@ revealOptions:
 
 - El compilador *certifica* la validesa dels raonaments.
 - Hi ha molts altres llenguatges: Isabelle, HOL Light, Coq, Metamath, Mizar, ProofPower,...
-- Ens centrem amb *Lean* (el més popular entre els **matemàtics**).
+- Però centrem amb *Lean*.
 ---
 
 ### Lean
@@ -78,22 +72,21 @@ revealOptions:
 - 2017: Lean 3.0 (tàctiques). Mathlib.
 - 2021: Lean 4 (implementat en Lean, llenguatge de programació genèric).
 - 2023: Mathlib4: Mathlib per Lean4.
-- 2023: Es crea el Lean FRO, una organització que manté el Lean actualment.
+- 2023: Es crea el Lean FRO, l'organització manté el Lean.
 
 ---
 
 
-### Característiques de LEAN
+### Característiques de Lean
 
 - Basat en teoria de tipus dependents (DTT)
   - No està basat en teoria de conjunts
 - Suporta tàctiques (automatització)
-  - Per ara, menys potents que altres sistemes
 - Irrellevància de demostracions (si $x$ i $y$ són demostracions de $P$, aleshores $x=y$).
   - No HoTT
 
 ---
-
+<!-- .slide: class="center" -->
 ## 2. Aplicacions
 
 ---
@@ -152,11 +145,11 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
 
 - Projecte global i lliure.
 - S'assumeix lògica clàssica (terç exclòs, axioma de l'elecció).
-- Més de $105 \text{K}$ definicions (maig 2025)
-- Més de $214\text{K}$ 'teoremes'.
+- Més de $105$K definicions (maig 2025)
+- Més de $214$K "teoremes".
 - 576 contribuïdors.
 
-![Lines](./lines.png)<!-- .element height="40%" width="40%" -->
+![Lines](./lines.png)<!-- .element height="50%" width="60%" -->
 
 
 ---
@@ -168,11 +161,9 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
 - <a href="https://leanprover-community.github.io/mathlib4_docs/mathlib.html" target="_blank">Visualització</a>
 
 ---
-
 <!-- .slide: class="center" -->
-
----
  ## 3. Enllaços rellevants
+---
 
 - <a href="https://mmasdeu.github.io/leanbootcamp" target="_blank">mmasdeu.github.io/leanbootcamp/slides.html</a>
 - <a href="https://leanprover-community.github.io/" target="_blank">Pàgina de Lean Community</a>
@@ -180,8 +171,9 @@ scrolling="yes"  max-width:100%;" allowfullscreen=""></iframe>
 - <a href="https://leanprover-community.github.io/mathematics_in_lean/" target="_blank">Mathematics in Lean</a> (llibre).
 
 ---
-
+<!-- .slide: class="center" -->
 ## 4. Taller
+---
 
 Fitxers Lean pel Bootcamp:
 
