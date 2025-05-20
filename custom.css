@@ -1,0 +1,407 @@
+html.dimBackground .slide-background { opacity: 0.4 !important; }
+
+/* make code sections larger */
+.reveal pre code {
+    max-height: 525px;
+}
+
+/* images without borders */
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+.reveal pre {
+    box-shadow:none;
+}
+
+.slide {
+    text-align: left;
+    background-size: contain !important;
+}
+
+.reveal {
+/*     font-family: 'Gill Sans MT', 'Trebuchet MS', Calibri, 'Gill Sans',  sans-serif; */
+    font-family: Inconsolata;
+    font-size: 2em;
+    font-weight: normal;
+    color: #000000;
+}
+
+
+/* two-column layout */
+#left {
+    left: -8.33%;
+    text-align: left;
+    float: left;
+    width: 50%;
+    z-index: -10;
+}
+
+#right {
+    left: 31.25%;
+    top: 75px;
+    float: right;
+    text-align: right;
+    z-index: -10;
+    width: 50%;
+}
+
+.reveal pre {
+	width: auto;
+}
+
+p {
+	text-align: inherit;
+}
+
+.reveal ul {
+	display: block;
+	margin-left: calc(1em + var(--r-block-margin));
+	margin-top: var(--r-block-margin);
+	margin-bottom: var(--r-block-margin);
+}
+
+p code, li code {
+	font-size: 80%;
+	box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+	background: #F6F8FB;
+}
+
+.reveal p {
+  line-height: 1;
+}
+.reveal p.multiline {
+  line-height: 1.3;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+    margin: var(--r-block-margin) 0 !important;
+}
+
+.parent-title {
+  display: table;
+  margin: auto;
+  padding-left: 20px;
+}
+.parent-title > span {
+  opacity: 0.5;
+  text-align: left;
+  display: block;
+  font-size: 50%;
+  margin-left: -20px;
+  margin-bottom: -5px;
+}
+
+.reveal .hljs:not(:first-child).fragment {
+    position: static;
+}
+
+.reveal .hljs .fragment.current-fragment {
+    font-weight: bold;
+}
+.reveal .hljs .fragment.current-fragment.no-bold {
+    font-weight: inherit;
+}
+
+.error {
+	text-decoration: underline wavy hsl(0, 85%, 62%);
+	position: relative;
+}
+.info {
+	text-decoration: underline wavy hsl(212, 100%, 61%);
+	position: relative;
+}
+.info > .msg,
+.error > .msg {
+  line-height: 1.1;
+	position: absolute;
+  padding: 5px;
+  border: 1px solid;
+  left: 0.5ex;
+  top: calc(0.5ex + 100%);
+  word-break: normal;
+  z-index: 2;
+  font-weight: normal;
+  display: block;
+}
+.error > .msg {
+	border-color: hsl(0, 85%, 62%);
+	background: hsl(0, 85%, 80%);
+}
+.info > .msg {
+	border-color: hsl(212, 100%, 80%);
+	background: hsl(212, 100%, 80%);
+}
+/*.reveal pre {
+	font-size: 0.75em;
+}*/
+.reveal pre code {
+	overflow: inherit;
+	max-height: none;
+}
+.reveal .slides section .error.fragment {
+  opacity: inherit;
+	visibility: inherit;
+}
+.fragment.visible .info > .msg,
+.fragment.visible .error > .msg,
+.fragment.current-fragment.visible .fragment.info > .msg,
+.fragment.current-fragment.visible .fragment.error > .msg,
+.fragment.current-fragment.visible .fragment .info > .msg,
+.fragment.current-fragment.visible .fragment .error > .msg {
+	display: none;
+}
+.fragment.current-fragment.visible .info > .msg,
+.fragment.current-fragment.visible .error > .msg,
+.fragment.current-fragment.visible.info > .msg,
+.fragment.current-fragment.visible.error > .msg {
+	display: block;
+}
+
+.reveal .r-stack > * {
+	margin: initial;
+}
+
+
+.lean-demo {
+  display: grid;
+  grid-template: auto / auto auto; column-gap: var(--r-block-margin);
+  margin: auto;
+}
+/*.lean-demo > pre {
+  flex: 5;
+}
+.lean-demo .lean-state {
+  flex: 3;
+}*/
+/*.lean-state pre {
+  padding: 5px;
+  margin-bottom: -10px;
+}*/
+.hljs-goal-done {
+  color: #569cd6;
+  font-weight: bolder;
+}
+.hljs-goal-hyp {
+  font-weight: bold;
+  color: #cc7a00;
+}
+.hljs-goal-sym {
+  font-weight: bold;
+  color: #367cb6;
+}
+
+.reveal blockquote {
+  padding: 0 var(--r-block-margin);
+  position: relative;
+  margin-bottom: 75px;
+  text-align: left;
+  background: #0000000d;
+  box-shadow: none;
+  width: auto;
+  display: flow-root;
+}
+.reveal blockquote.long {
+  font-style: inherit;
+  width: auto;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* black.css does something wacky here */
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: revert; }
+
+blockquote p.reference {
+    text-align: right;
+    position: absolute;
+    font-style: normal;
+    top: 100%;
+    right: 60px;
+    font-size: 80%;
+    margin-top: 5px;
+    min-height: 50px;
+    vertical-align: bottom;
+    line-height: 1em;
+}
+blockquote p.reference::before {
+    position: absolute;
+    top: -5px;
+    right: -60px;
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-left: 50px solid #0000000d;
+    border-bottom: 50px solid transparent;
+}
+.reveal blockquote.long p.reference {
+  font-size: 60%;
+}
+
+p.reference {
+  font-size: 75%;
+  line-height: 1;
+}
+p.reference > cite {
+  display: block;
+}
+p.reference > cite a {
+  color: inherit;
+}
+p.reference > span {
+  opacity: 0.6;
+  display: block;
+}
+
+.reveal table th[scope="row"] {
+	border-bottom: 0px;
+	border-right: 2px solid;
+}
+.reveal table thead th[scope="row"] {
+	border-bottom: 1px solid;
+}
+.reveal table tr.fragment th[scope="row"] {
+	border-right: 0px solid;
+}
+.reveal table tr.fragment.visible th[scope="row"] {
+	border-right: 2px solid;
+}
+
+.reveal table th[scope="row"] ~ td {
+	border-bottom: 0px;
+}
+
+.reveal .slides section .fragment.current-only {
+  display: block;
+  visibility: hidden;
+  transform: translate(0, 40px);
+
+}
+.reveal .slides section .fragment.current-only.visible.current-fragment {
+  transform: translate(0, 0px);
+  visibility: visible;
+  opacity: 1;
+}
+.reveal .slides section .fragment.current-only.visible {
+  transform: translate(0, -40px);
+  opacity: 0;
+}
+
+.reveal .grid {
+	display: grid;
+	column-gap: var(--r-block-margin);
+	row-gap: var(--r-block-margin);
+	margin-top: var(--r-block-margin);
+	margin-bottom: var(--r-block-margin);
+}
+
+.reveal .grid > * {
+	margin-top: calc(-1 * var(--r-block-margin));
+	margin-bottom: calc(-1 * var(--r-block-margin));
+}
+.reveal .grid * h4 {
+	margin-top: var(--r-block-margin);
+	margin-bottom: var(--r-block-margin);
+}
+
+.reveal .grid > blockquote {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	align-self: end;
+}
+.reveal .grid > iframe {
+	height: 100%;
+	max-height: none;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.reveal .scroll-container {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+/*.reveal .scroll-container {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+*/
+.reveal .grid > h3 {
+	margin: 0;
+}
+
+.reveal blockquote pre { font-style: normal }
+
+.reveal dl.grid {
+  grid-template-columns: auto 1fr;
+  display: grid;
+}
+.reveal dl.grid dt {
+  grid-column: 1;
+  text-align: right;
+  margin-top: 0;
+  align-self: start;
+}
+.reveal dl.grid dd {
+  grid-column: 2;
+  margin-left: 0;
+}
+
+.reveal mjx-container[jax="CHTML"][display="true"] {
+    font-size: 100% !important;
+}
+
+.reveal .katex-display {
+  margin: var(--r-block-margin) 0;
+}
+
+.reveal .katex .sizing.reset-size6.size10 {
+  font-size: 2em;
+}
+.reveal  .katex .sizing.reset-size10.size8 {
+  font-size: 0.7em;
+}
+.reveal small {
+  vertical-align: middle;
+}
+.reveal small * {
+  vertical-align: unset;
+}
+
+:root {
+  --r-code-font: 'Inconsolata', consolas, monospace !important;
+}
+
+code {
+	color: #24292e;
+	box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+}
+
+pre code {
+    box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+	background: #f0f6ff;
+}
+.reveal dl {margin: 0;}
+
+.reveal .katex {
+  font-size: 1.1em;
+}
+
+:root {
+  --c-red: rgba(128, 0, 0);
+  --c-yellow: rgba(128, 128, 0);
+  --c-green: rgba(0, 128, 0);
+}
+
+.reveal .hljs {
+  min-height: unset;
+}
+
+mark {
+  font-weight: bold;
+  background: transparent;
+}
+
+p { text-align: left; }
