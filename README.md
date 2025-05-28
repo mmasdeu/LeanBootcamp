@@ -15,8 +15,7 @@
 
 Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de tàctiques](tactics.pdf) com a referència.
 
-També podeu veure el vídeo de la segona sessió del Bootcamp:
-[![Lean Bootcamp 2025 - Sessió 2](https://youtu.be/UgK24uWrrSA/0.jpg)](https://youtu.be/UgK24uWrrSA)
+També podeu veure el [vídeo de la segona sessió del Bootcamp](https://youtu.be/UgK24uWrrSA).
 
 ## Instal·lació
 
