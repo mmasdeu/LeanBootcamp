@@ -15,6 +15,8 @@
 
 Per recordar les tàctiques que anirem aprenent, es pot consultar el [resum de tàctiques](tactics.pdf) com a referència.
 
+També podeu veure el vídeo de la segona sessió del Bootcamp:
+[![Lean Bootcamp 2025 - Sessió 2](https://youtu.be/UgK24uWrrSA/0.jpg)](https://youtu.be/UgK24uWrrSA)
 
 ## Instal·lació
 
@@ -26,10 +28,10 @@ L'objectiu és completar-lo en unes 4 hores.
 
 Podeu treballar amb Lean mitjançant una de les 3 opcions següents:
 1. Instal·lar Lean localment (la millor a llarg termini).
-2. Utilitzar el servior lean4web (per començar sense cap prerequisit).
+2. Utilitzar el servidor lean4web (per començar sense cap prerequisit).
 3. Fer servir Codespaces o Gitpod (per no instal·lar res, però ens permet fer servir projectes més grans).
 
-### Versió Online, sense registre
+### Versió online, sense registre
 
 La manera més fàcil de provar Lean sense haver de crear cap tipus de compte és fer servir el [servidor lean4web](https://live.lean-lang.org/) proveït pel [Lean FRO](https://lean-fro.org/). Podeu clicar els enllaços de més amunt.
 
@@ -38,7 +40,7 @@ La manera més fàcil de provar Lean sense haver de crear cap tipus de compte é
 
 Hi ha webs que ens permeten treballar més còmodament, però cal un compte a [GitHub](www.github.com).
 
-* Per fer servir codespaces, cliqueu al botó de sota estant loggejat a GitHub. Escolliu l'opció `4-core` i cliqueu `Create codespace`. Després d'uns minuts apareixerà un editor Lean en el propi navegador.
+* Per fer servir Codespaces, cliqueu al botó de sota estant loggejat a GitHub. Escolliu l'opció `4-core` i cliqueu `Create codespace`. Després d'uns minuts apareixerà un editor Lean en el propi navegador.
 
     [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mmasdeu/LeanBootcamp)
 
